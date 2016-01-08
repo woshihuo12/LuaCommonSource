@@ -3,10 +3,10 @@
 -- Lua 5.1 compatible
 
 -- GLOBAL
-Stack = {}
+local Stack = {}
 
 -- Create a Table with stack functions
-function Stack:Create()
+function Stack.create()
 	local t = {}
 	t._et = {}
 
@@ -50,9 +50,11 @@ function Stack:Create()
 end
 
 if false then
-	stack = Stack:Create()
+	stack = Stack.create()
 	stack:push("a", "b")
 	stack:list()
 	stack:pop()
 	stack:list()
 end
+
+return Stack
